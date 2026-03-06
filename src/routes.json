@@ -6,25 +6,27 @@
   },
   "extensions": [
     {
-      "name": "Red box",
-      "component": "redBox",
-      "slot": "Boxes"
+      "name": "partograph-summary-dashboard",
+      "slot": "patient-chart-dashboard-slot",
+      "component": "patientChartPartographLink",
+      "meta": {
+        "slot": "patient-chart-partograph-dashboard-slot",
+        "path": "Partograph",
+        "layoutMode": "anchored"
+      },
+      "order": 17,
+      "online": true,
+      "offline": true
     },
     {
-      "name": "Blue box",
-      "component": "blueBox",
-      "slot": "Boxes"
-    },
-        {
-      "name": "Brand box",
-      "component": "blueBox",
-      "slot": "Boxes"
+      "name": "partograph-details-overview",
+      "slot": "patient-chart-partograph-dashboard-slot",
+      "component": "root",
+      "online": true,
+      "offline": true
     }
   ],
   "pages": [
-    {
-      "component": "root",
-      "route": "root"
-    }
+   
   ]
 }

@@ -4,13 +4,15 @@
  * connects the app shell to the React application(s) that make up this
  * microfrontend.
  */
-import { getAsyncLifecycle, defineConfigSchema } from '@openmrs/esm-framework';
+import { getAsyncLifecycle, defineConfigSchema, getSyncLifecycle } from '@openmrs/esm-framework';
+import { createDashboardLink } from '@openmrs/esm-patient-common-lib';
 import { configSchema } from './config-schema';
+import { patientChartPartographMetaData } from './dashboard-meta';
 
-const moduleName = '@openmrs/esm-template-app';
+const moduleName = '@ampath/esm-partograph-app';
 
 const options = {
-  featureName: 'root-world',
+  featureName: 'partograph',
   moduleName,
 };
 
@@ -39,11 +41,7 @@ export function startupApp() {
  */
 export const root = getAsyncLifecycle(() => import('./root.component'), options);
 
-/**
- * The following are named exports for the extensions defined in this frontend modules. See the `routes.json` file to see how these are used.
- */
-export const redBox = getAsyncLifecycle(() => import('./boxes/extensions/red-box.component'), options);
-
-export const blueBox = getAsyncLifecycle(() => import('./boxes/extensions/blue-box.component'), options);
-
-export const brandBox = getAsyncLifecycle(() => import('./boxes/extensions/brand-box.component'), options);
+export const patientChartPartographLink = getSyncLifecycle(
+  createDashboardLink(patientChartPartographMetaData),
+  options,
+);

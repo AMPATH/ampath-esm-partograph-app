@@ -1,13 +1,14 @@
 {
-  "name": "@openmrs/esm-template-app",
+  "name": "@ampath/esm-partograph-app",
   "version": "4.0.0",
   "license": "MPL-2.0",
-  "description": "An OpenMRS seed application for building microfrontends",
-  "browser": "dist/openmrs-esm-template-app.js",
+  "description": "A graphical tool used to monitor maternal and fetal conditions during labor.",
+  "browser": "dist/ampath-esm-partograph-app.js",
   "main": "src/index.ts",
   "source": true,
   "scripts": {
     "start": "openmrs develop",
+    "dev": "openmrs develop --backend=https://staging.ampath.or.ke --api-url=/openmrs --config-url=https://ngx.ampath.or.ke/o3-config.json --port=9000",
     "serve": "webpack serve --mode=development",
     "build": "webpack --mode production",
     "analyze": "webpack --mode=production --env analyze=true",
@@ -25,19 +26,20 @@
     "extends browserslist-config-openmrs"
   ],
   "keywords": [
+    "ampath",
     "openmrs",
     "microfrontends"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openmrs/openmrs-esm-template-app.git"
+    "url": "git+https://github.com/ampath/ampath-esm-partograph-app.git"
   },
-  "homepage": "https://github.com/openmrs/openmrs-esm-template-app#readme",
+  "homepage": "https://github.com/ampath/ampath-esm-partograph-app#readme",
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/openmrs/openmrs-esm-template-app/issues"
+    "url": "https://github.com/ampath/ampath-esm-partograph-app/issues"
   },
   "dependencies": {
     "@carbon/react": "^1.83.0",
@@ -53,6 +55,7 @@
   },
   "devDependencies": {
     "@openmrs/esm-framework": "next",
+    "@openmrs/esm-patient-common-lib": "next",
     "@openmrs/esm-styleguide": "next",
     "@playwright/test": "^1.52.0",
     "@swc/cli": "^0.3.12",
