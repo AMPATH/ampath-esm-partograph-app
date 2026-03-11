@@ -1,0 +1,23 @@
+@use '@carbon/layout';
+@use '@carbon/type';
+@use '@openmrs/esm-styleguide/src/vars' as *;
+
+.filterEmptyState {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: layout.$spacing-09;
+    text-align: center;
+    background-color: $ui-02;
+}
+
+.filterEmptyStateTile {
+    margin: auto;
+    background-color: $ui-01;
+}
+
+.filterEmptyStateContent {
+    @include type.type-style('heading-compact-02');
+    color: $text-02;
+    margin-bottom: layout.$spacing-03;
+}

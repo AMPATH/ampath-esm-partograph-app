@@ -3,6 +3,7 @@ import { LineChart } from '@carbon/charts-react';
 import '@carbon/charts-react/styles.css';
 import options from "./options";
 import { getHoursLabels } from "../../utils";
+import AddObservationAction from "../../action/add-observation-action.component";
 
 interface FoetalHeartRateChartProps {
     hello: string
@@ -10,10 +11,13 @@ interface FoetalHeartRateChartProps {
 
 const FoetalHeartRateChart: React.FC<FoetalHeartRateChartProps> = ({ hello }) => {
     const group = "Foetal Heart Rate";
+    const workspaceName = "foetal-heart-rate-workspace";
 
     useEffect(() => {
         console.log(hello);
     }, []);
+
+    const mutated = () => { };
 
     const data = useMemo(() => {
         const hoursLabels = getHoursLabels();
@@ -30,7 +34,10 @@ const FoetalHeartRateChart: React.FC<FoetalHeartRateChartProps> = ({ hello }) =>
         return body;
     }, []);
     return (
-        <LineChart data={data} options={options} />
+        <>
+            <AddObservationAction workspaceName={workspaceName} mutated={mutated} />
+            <LineChart data={data} options={options} />
+        </>
     );
 }
 

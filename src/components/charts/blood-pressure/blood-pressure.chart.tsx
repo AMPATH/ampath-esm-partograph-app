@@ -3,6 +3,7 @@ import { LollipopChart } from '@carbon/charts-react';
 import '@carbon/charts-react/styles.css';
 import options from "./options";
 import { getHoursLabels } from "../../utils";
+import AddObservationAction from "../../action/add-observation-action.component";
 
 interface BloodPressureChartProps {
     hello: string
@@ -10,10 +11,13 @@ interface BloodPressureChartProps {
 
 const BloodPressureChart: React.FC<BloodPressureChartProps> = ({ hello }) => {
     const group = "Pulse";
+    const workspaceName = "blood-pressure-workspace"
 
     useEffect(() => {
         console.log(hello);
     }, []);
+
+    const mutated = () => { }
 
     const data = useMemo(() => {
         const hoursLabels = getHoursLabels(1);
@@ -30,7 +34,10 @@ const BloodPressureChart: React.FC<BloodPressureChartProps> = ({ hello }) => {
         return body;
     }, []);
     return (
-        <LollipopChart data={data} options={options} />
+        <>
+            <AddObservationAction workspaceName={workspaceName} mutated={mutated} />
+            <LollipopChart data={data} options={options} />
+        </>
     );
 }
 

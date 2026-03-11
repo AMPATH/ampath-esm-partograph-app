@@ -3,6 +3,7 @@ import { LineChart } from '@carbon/charts-react';
 import '@carbon/charts-react/styles.css';
 import options from "./options";
 import { getHoursLabels } from "../../utils";
+import AddObservationAction from "../../action/add-observation-action.component";
 
 interface CervicalChartProps {
     hello: string
@@ -11,10 +12,13 @@ interface CervicalChartProps {
 const CervicalChart: React.FC<CervicalChartProps> = ({ hello }) => {
     const group = "Alert Line";
     const group1 = "Action Line";
+    const workspaceName = "cervical-workspace";
 
     useEffect(() => {
         console.log(hello);
     }, []);
+
+    const mutated = () => { };
 
     const data = useMemo(() => {
         const hoursLabels = getHoursLabels(1);
@@ -35,7 +39,10 @@ const CervicalChart: React.FC<CervicalChartProps> = ({ hello }) => {
         return body;
     }, []);
     return (
-        <LineChart data={data} options={options} />
+        <>
+            <AddObservationAction workspaceName={workspaceName} mutated={mutated} />
+            <LineChart data={data} options={options} />
+        </>
     );
 }
 

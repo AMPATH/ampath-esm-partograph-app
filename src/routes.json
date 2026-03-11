@@ -34,6 +34,14 @@
       "offline": true
     },
     {
+      "name": "membrane-amniotic-fluid-and-moulding-datatable",
+      "slot": "partograph-chart-slot",
+      "component": "membraneAmnioticFluidAndMouldingDatatable",
+      "order": 1,
+      "online": true,
+      "offline": true
+    },
+    {
       "name": "cervical-chart",
       "slot": "partograph-chart-slot",
       "component": "cervicalChart",
@@ -42,9 +50,42 @@
       "offline": true
     },
     {
+      "name": "oxytocin-datatable",
+      "slot": "partograph-chart-slot",
+      "component": "oxytocinDatatable",
+      "order": 3,
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "drugs-and-fluids-datatable",
+      "slot": "partograph-chart-slot",
+      "component": "drugsAndFluidsDatatable",
+      "order": 4,
+      "online": true,
+      "offline": true
+    },
+    {
       "name": "blood-pressure-chart",
       "slot": "partograph-chart-slot",
       "component": "bloodPressureChart",
+      "order": 5,
+      "online": true,
+      "offline": true
+    },
+      {
+      "name": "temperature-datatable",
+      "slot": "partograph-chart-slot",
+      "component": "temperatureDatatable",
+      "order": 6,
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "urine-datatable",
+      "slot": "partograph-chart-slot",
+      "component": "urineDatatable",
+      "order": 7,
       "online": true,
       "offline": true
     }
