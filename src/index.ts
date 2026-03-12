@@ -57,3 +57,14 @@ export const membraneAmnioticFluidAndMouldingDatatable = getAsyncLifecycle(() =>
 export const oxytocinDatatable = getAsyncLifecycle(() => import('./components/datatable/oxytocin/oxytocin.datatable'), options);
 export const temperatureDatatable = getAsyncLifecycle(() => import('./components/datatable/temperature/temperature.datatable'), options);
 export const urineDatatable = getAsyncLifecycle(() => import('./components/datatable/urine/urine.datatable'), options);
+
+// Workspaces
+// Forms
+export const foetalHeartRateForm = getAsyncLifecycle(() => import('./components/workspaces/foetal-heart-rate-form/foetal-heart-rate-form.workspace'), options);
+export const cervicalForm = getAsyncLifecycle(() => import('./components/workspaces/cervical-form/cervical-form.workspace'), options);
+export const bloodPressureForm = getAsyncLifecycle(() => import('./components/workspaces/blood-pressure-form/blood-pressure-form.workspace'), options);
+export const drugsAndFluidsForm = getAsyncLifecycle(() => import('./components/workspaces/drugs-and-fluids-form/drugs-and-fluids-form.workspace'), options);
+export const membraneAmnioticFluidAndMouldingForm = getAsyncLifecycle(() => import('./components/workspaces/membrane-amniotic-fluid-and-moulding-form/membrane-amniotic-fluid-and-moulding-form.workspace'), options);
+export const oxytocinForm = getAsyncLifecycle(() => import('./components/workspaces/oxytocin-form/oxytocin-form.workspace'), options);
+export const temperatureForm = getAsyncLifecycle(() => import('./components/workspaces/temperature-form/temperature-form.workspace'), options);
+export const urineForm = getAsyncLifecycle(() => import('./components/workspaces/urine-form/urine-form.workspace'), options);

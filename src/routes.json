@@ -73,7 +73,7 @@
       "online": true,
       "offline": true
     },
-      {
+    {
       "name": "temperature-datatable",
       "slot": "partograph-chart-slot",
       "component": "temperatureDatatable",
@@ -90,5 +90,59 @@
       "offline": true
     }
   ],
-  "pages": []
+  "pages": [],
+  "workspaces2": [
+    {
+      "name": "foetal-heart-rate-workspace",
+      "component": "foetalHeartRateForm",
+      "window": "partograph-window"
+    },
+    {
+      "name": "cervical-workspace",
+      "component": "cervicalForm",
+      "window": "partograph-window"
+    },
+    {
+      "name": "blood-pressure-workspace",
+      "component": "bloodPressureForm",
+      "window": "partograph-window"
+    },
+    {
+      "name": "drugs-and-fluids-workspace",
+      "component": "drugsAndFluidsForm",
+      "window": "partograph-window"
+    },
+    {
+      "name": "membrane-amniotic-fluid-and-moulding-workspace",
+      "component": "membraneAmnioticFluidAndMouldingForm",
+      "window": "partograph-window"
+    },
+    {
+      "name": "oxytocin-workspace",
+      "component": "oxytocinForm",
+      "window": "partograph-window"
+    },
+    {
+      "name": "temperature-workspace",
+      "component": "temperatureForm",
+      "window": "partograph-window"
+    },
+    {
+      "name": "urine-workspace",
+      "component": "urineForm",
+      "window": "partograph-window"
+    }
+  ],
+  "workspaceWindows2": [
+    {
+      "name": "partograph-window",
+      "group": "partograph-group"
+    }
+  ],
+  "workspaceGroups2": [
+    {
+      "name": "partograph-group",
+      "overlay": true
+    }
+  ]
 }

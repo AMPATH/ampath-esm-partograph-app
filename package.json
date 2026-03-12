@@ -44,7 +44,10 @@
   "dependencies": {
     "@carbon/charts-react": "^1.27.2",
     "@carbon/react": "^1.83.0",
-    "lodash-es": "^4.17.21"
+    "@hookform/resolvers": "^3.6.0",
+    "lodash-es": "^4.17.21",
+    "react-hook-form": "^7.52.2",
+    "zod": "^3.23.8"
   },
   "peerDependencies": {
     "@openmrs/esm-framework": "*",
